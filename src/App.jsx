@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { createElement } from 'react'
 import './App.css'
+import image from '../public/fujikaze.jpeg'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const heading = createElement('h1', 'null', 'FUJI KAZE');
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div>{heading}</div>
+      <div className='contentContainer'>
+        <img src={image} alt="Fuji Kaze" width={300} height={300}/>
+        <div className='albumContainer'>
+          <details>
+            <summary>Help Ever Hurt Never</summary>
+            <ol>
+              <li>Nan-Nan</li>
+              <li>Mo-Eh-Wa</li>
+              <li>Yasashisa</li>
+              <li>Kiri ga Naikara</li>
+              <li>Tsumi no Kaori</li>
+              <li>Cho Si Noccha Te</li>
+              <li>Tokuninai</li>
+              <li>Shinunoga E-Wa</li>
+              <li>Kazeyo</li>
+              <li>Sayonara Baby</li>
+              <li>Kaerou</li>
+            </ol>
+          </details>
+          <details>
+            <summary>Love All Serve All</summary>
+            <ol>
+              <li>Kirari</li>
+              <li>Matsuri</li>
+              <li>Hedemo Ne-Yo</li>
+              <li>Yaba</li>
+              <li>Mo-Eh-Yo</li>
+              <li>Garden</li>
+              <li>Damn</li>
+              <li>Lonely Rhapsody</li>
+              <li>Bye for Now</li>
+              <li>Seishun Sick</li>
+              <li>Tabiji</li>
+            </ol>
+          </details>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 

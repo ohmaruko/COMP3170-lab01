@@ -4,39 +4,44 @@
   padding: 2rem;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.contentContainer {
+  display: flex;
+  flex-direction: row;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.albumContainer {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+details {
+  border-bottom: 1px solid #aaa;
+  padding: 0.5em 1em 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 1em;
+  list-style: none;
+}
+summary::after {
+  content: "+";
+  font-size: 1.2em;
+  margin-left: 0.5em;
 }
 
-.card {
-  padding: 2em;
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+  background-color: #303030;
+}
+details[open] summary::after {
+  content: "-";
 }
 
-.read-the-docs {
-  color: #888;
+details > summary::-webkit-details-marker {
+  display: none; /* for safari */
+}
+details > summary::marker {
+  display: none; /* for firefox */
 }
